@@ -21,18 +21,18 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
 
 -- non_lsp_mappings
-vim.keymap.set("n", "J", "mzJ`z")       -- Keep cursor in same position on line join
-vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Keep cursor in middle on half page jump down
-vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Keep cursor in middle on half page jump down
-vim.keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Keep cursor in middle on line join" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Keep cursor in middle on half page jump down" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Keep cursor in middle on half page jump up" })
+vim.keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment toggle lines" })
+
+vim.keymap.set("n", "n", "nzzzv", { desc = "Keep cursor in middle on search next" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Keep cursor in middle on search previous" })
 vim.keymap.set("x", "p", "\"_dP", { desc = "Paste without overwriting clipboard" })
+
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable Q" })
 
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tumux neww tmux-sessionizer<CR>")
-
---vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace word under cursor" }) 
 
 -- git vim-fugitive 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git status" })
