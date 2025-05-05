@@ -36,7 +36,7 @@ return {
         "bashls",          -- Bash
         "powershell_es",   -- PowerShell
         "markdown_oxide",  -- Markdown
---        "terraformls",     -- Terraform
+        -- "terraformls",     -- Terraform
       },
       handlers = {
         function(server_name)
