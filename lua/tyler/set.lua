@@ -13,14 +13,16 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- Other 
+vim.opt.swapfile = false          -- don't use swapfile
+
 vim.opt.showmatch = ture          -- show matching bracket when hover  
 vim.opt.mat = 2 	          -- for .2 sec 
 vim.opt.ignorecase = true		  -- ignorecase on search  
 vim.opt.hlsearch = true             -- highlight all matches 
-vim.opt.so = 7		          -- keep 7 lines above and below
-
-vim.opt.wrap = false
- 
 vim.opt.incsearch = true -- incremental search
- 
+
+vim.opt.scrolloff = 7		          -- keep 7 lines above and below
+vim.opt.wrap = false
 vim.opt.termguicolors = true
+
+vim.opt.updatetime = 100
