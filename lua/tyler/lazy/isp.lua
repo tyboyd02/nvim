@@ -35,6 +35,7 @@ return {
         "ansiblels",       -- Ansible
         "bashls",          -- Bash
         "powershell_es",   -- PowerShell
+        "markdown_oxide",  -- Markdown
 --        "terraformls",     -- Terraform
       },
       handlers = {
