@@ -5,6 +5,13 @@ vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<CR>', { desc = "Neotree toggle
 local builtin = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+vim.keymap.set("n", "<leader>fh", function()
+  require("telescope.builtin").find_files({
+    cwd = vim.fn.expand("~"),
+    hidden = true,
+    file_ignore_patterns = { "%.get/", "node_modules/", "%.local/", "%.cache/"}
+  })
+end, { desc = "Find files from home" })
 vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Find git files" })
 vim.keymap.set("n", "<leader>fl", builtin.live_grep, { desc = "Live grep" })
 
@@ -18,6 +25,13 @@ vim.keymap.set("n", "J", "mzJ`z")       -- Keep cursor in same position on line 
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Keep cursor in middle on half page jump down
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Keep cursor in middle on half page jump down
 vim.keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("x", "p", "\"_dP", { desc = "Paste without overwriting clipboard" })
+vim.keymap.set("n", "Q", "<nop>", { desc = "Disable Q" })
+
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tumux neww tmux-sessionizer<CR>")
+
 --vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- git vim-fugitive 
@@ -29,4 +43,3 @@ vim.keymap.set("n", "<leader>gp", function() vim.cmd("Git push") end, { desc = "
 vim.keymap.set("n", "<leader>gP", function() vim.cmd("Git pull") end, { desc = "Git pull" })
 vim.keymap.set("n", "<leader>gc", function() vim.cmd("Git commit") end, { desc = "Git commit" })
 vim.keymap.set("n", "<leader>ga", function() vim.cmd("Git add %") end, { desc = "Git add current file" })
-
