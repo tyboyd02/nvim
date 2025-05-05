@@ -31,11 +31,11 @@ return {
       ensure_installed = {
         "tsserver",        -- Typescript 
         "lua_ls",          -- Lua
-        "ruff",            -- Python
-        "ansiblels",       -- Ansible
-        "terraformls",     -- Terraform
-        "bashls",          -- Bash
-        "powershell_es",   -- PowerShell
+        "ruff"            -- Python
+        --"ansiblels",       -- Ansible
+        --"terraformls",     -- Terraform
+        --"bashls",          -- Bash
+        --"powershell_es",   -- PowerShell
       },
       handlers = {
         function(server_name)
