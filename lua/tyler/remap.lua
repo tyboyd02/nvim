@@ -32,7 +32,7 @@ vim.keymap.set("x", "p", "\"_dP", { desc = "Paste without overwriting clipboard"
 
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable Q" })
 
--- vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace word under cursor" }) 
+vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace word under cursor" }) 
 
 -- git vim-fugitive 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git status" })
