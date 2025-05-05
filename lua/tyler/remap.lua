@@ -1,4 +1,5 @@
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Neotree toggle" })
+vim.keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Neotree focus" })
+vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<CR>', { desc = "Neotree toggle" })
 
 -- telescope_mappings
 local builtin = require("telescope.builtin")
