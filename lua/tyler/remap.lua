@@ -43,3 +43,8 @@ vim.keymap.set("n", "<leader>gp", function() vim.cmd("Git push") end, { desc = "
 vim.keymap.set("n", "<leader>gP", function() vim.cmd("Git pull") end, { desc = "Git pull" })
 vim.keymap.set("n", "<leader>gc", function() vim.cmd("Git commit") end, { desc = "Git commit" })
 vim.keymap.set("n", "<leader>ga", function() vim.cmd("Git add %") end, { desc = "Git add current file" })
+
+-- Buffers
+vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
