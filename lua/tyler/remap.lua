@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader>fh", function()
     file_ignore_patterns = { "%.get/", "node_modules/", "%.local/", "%.cache/"}
   })
 end, { desc = "Find files from home" })
+
 vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Find git files" })
 vim.keymap.set("n", "<leader>fl", builtin.live_grep, { desc = "Live grep" })
 
@@ -33,6 +34,15 @@ vim.keymap.set("x", "p", "\"_dP", { desc = "Paste without overwriting clipboard"
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable Q" })
 
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace word under cursor" }) 
+
+-- Start of page and end of pate 
+vim.keymap.set("n", "G", "G$", { desc = "Go to end of page" })
+vim.keymap.set("n", "gg", "gg0", { desc = "Go to start of page" })
+
+
+-- Stay in visual mode after indenting
+vim.keymap.set("v", ">", ">gv", { desc = "Indent and reselect" })
+vim.keymap.set("v", "<", "<gv", { desc = "Outdent and reselect" })
 
 -- git vim-fugitive 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git status" })
