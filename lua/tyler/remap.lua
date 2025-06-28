@@ -62,3 +62,8 @@ vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
 vim.keymap.set("n", "<leader>bl", ":buffers<CR>", { desc = "List buffers" })
+
+-- SnipRun
+vim.keymap.set("n", "<leader>r", "<cmd>SnipRun<CR>", { desc = "Run current line with SnipRun" })
+vim.keymap.set("v", "<leader>r", ":SnipRun<CR>", { desc = "Run selected region with SnipRun" })
+vim.keymap.set("n", "<leader>rf", "<cmd>%SnipRun<CR>", { desc = "Run entire file with SnipRun" })
