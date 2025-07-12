@@ -29,7 +29,6 @@ return {
 
     require('mason-lspconfig').setup({
       ensure_installed = {
-        "ts_ls",        -- Typescript 
         "lua_ls",          -- Lua
         "ruff",           -- Python
         "ansiblels",       -- Ansible
